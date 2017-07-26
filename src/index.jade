@@ -1,0 +1,20 @@
+doctype
+html
+    head
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+    body
+        .container
+            .row
+                mixin deporte(imagen, encabezado, precio)
+                    .col-md-6
+                        img(src="http://lorempixel.com/400/200/sports/#{imagen}")
+                        h2 #{encabezado}
+                        p $ #{precio}
+
+                +deporte(8, "deporte", "78")
+                +deporte(3, "otro deporte", "89")
+                +deporte(5, "uno más", "56")
+                +deporte(7, "otro", "89")
+                +deporte(9, "otro más", "89")
+                +deporte(1, "y ya", "89")
+
